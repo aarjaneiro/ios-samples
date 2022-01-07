@@ -14,7 +14,7 @@ urlFragment: passkit
 This sample demonstrates how to build a PassKit Companion App to interact with passes you have issued in a users Passbook.
 
 > [!NOTE]
-> This sample doesn't work out of the box, you need to setup provisioning profile for you app and create certificate for pass signing.
+> This sample doesn't work out of the box, you need to setup provisioning profile for your app and create a certificate for pass signing.
 
 ![screenshot](Screenshots/01-PassLibrary.png "PassLibrary")
 
@@ -45,14 +45,14 @@ cd path/to/PassLibrary/sample
 ./signpass -p CouponBanana2.pass/ -c "Common_Name"
 ```
 
-You can determine the correct value for `Common_Name` with **Keychain Access** app:
+You can determine the correct value for `Common_Name` with the **Keychain Access** app:
 
-- Launch **Keychain Access** app
+- Launch the **Keychain Access** app
 - Find the certificate which you installed a few steps ago
 - **Select certificate > Right Click > Get Info**
 - Here you are able to see `Common Name` - it could be something like `"Pass Type ID: pass.com.yourcompany.passkitnameyouchose"`
 
-After running that command in the **Terminal**, you should be able to find **CouponBanana2.pkpass** in the same folder as the command was run. 
+After running that command in the **Terminal**, you should be able to find **CouponBanana2.pkpass** in the folder in which the command was run. 
 
 #### Pass Troubleshooting
 
@@ -63,7 +63,7 @@ If you don't update the values in **pass.json**, you'll get an error
 
 You can easily test a compiled Pass by dragging the file into a running iOS Simulator window. It should appear in the simulator and allow you to add it directly to the **Wallet**. In the Wallet you can then view and delete the pass.
 
-If the pass does not appear, or cannot be added to the Wallet, verify all the steps above were completed correctly (especially the certificate generation, downloading, and the personalized values in **pass.json**).
+If the pass does not appear, or cannot be added to the Wallet, verify that all the steps above were completed correctly (especially the certificate generation, downloading, and the personalized values in **pass.json**).
 
 Do not attempt to run the sample app until the Pass is generated and used successfully.
 
